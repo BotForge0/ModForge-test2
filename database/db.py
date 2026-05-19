@@ -14,7 +14,7 @@ from cachetools import TTLCache
 log = logging.getLogger("ModForge.DB")
 
 class Database:
-    CONFIG_CACHE_TTL = 300          # 5 Minuten
+    CONFIG_CACHE_TTL = 300          # 5 Minuten (Fufi später erweitern)
     CONFIG_CACHE_MAXSIZE = 10000
     WHITELIST_CACHE_TTL = 300
     WHITELIST_CACHE_MAXSIZE = 10000
