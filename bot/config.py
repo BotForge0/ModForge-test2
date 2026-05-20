@@ -3,14 +3,14 @@ import time
 import re
 import logging
 
-# uptime
+# Bot Zeit /(Fufi immer bei neuer version alte zeit zu adden)
 BOT_START_TIME = time.time()
 EXTRA_UPTIME = 2334360
 
 def get_uptime(start_time: float = BOT_START_TIME):
     return int(time.time() - start_time) + EXTRA_UPTIME
 
-# token
+# Discord bot token seret (Fufi set)
 BOT_TOKEN = os.getenv("DISCORD_TOKEN") or "DEIN_BOT_TOKEN_HIER"
 
 # logging
@@ -24,7 +24,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("ModForge")
 
-# farben & konstanten
+# Embeds Farben und oder embed footer (Webung) (fufi bald neue machen footer icon)
 COLOR_PRIMARY = 0x4169E1
 COLOR_SUCCESS = 0x3CB371
 COLOR_WARNING = 0xFEE75C
@@ -36,7 +36,7 @@ FOOTER_TEXT = "Powered by BotForge 🔒"
 FOOTER_ICON = "https://cdn.discordapp.com/attachments/1484888992209047696/1491469357182615602/file_000000000b5c71f48f7e7249237db00d.png"
 VERIFY_BANNER_URL = "https://cdn.discordapp.com/attachments/1484260674145353928/1491861030601490432/1775755687339.png?ex=69d93b5b&is=69d7e9db&hm=d65f0da063a98be84b880e8abbdaeaac62eefe7f674724835b3a7e56b20f4943&"
 
-# emoji klasse
+# Discord devopler Portal bit uplod emojis 
 class E:
     OK = "<:1000052153:1493631416355917845>"
     FAIL = "<:1000052152:1493631418671169546>"
@@ -93,7 +93,7 @@ class E:
     CREATED = "<:1000051755:1493333177710678118>"
     ROLES = "<:1000051792:1493333255091388607>"
     CHANNELS = "<:1000051804:1493333277413740625>"
-    APPEAL = "📋"
+    APPEAL = "📋" # bleibt so (bald fufi soll)
     MESSAGE = "<:1000051770:1493333205082837202>"
     WEBHOOK = "<:1000051809:1493333289887334581>"
     PERMS = "<:1000051808:1493333287874068660>"
@@ -199,7 +199,7 @@ DEFAULT_CONFIG = {
     "appeal_log_channel": None
 }
 
-# help data
+# befehle help
 HELP_DATA = {
     "mod": (f"{E.NUKE} Moderation", [
         ("/ban <member> [reason]", "Bannt einen Nutzer permanent", "Ban Members",
@@ -326,7 +326,7 @@ HELP_DATA = {
     ]),
 }
 
-# WEB KONSTANTEN (werden von web/routes.py genutzt)
+# WEB KONSTANTEN (werden von web/routes.py genutzt) (neu)
 
 FEATURES = [
     {"icon":"🛡️","title":"Anti-Nuke","desc":"Stoppt Massen-Bans, Kicks und Kanal-/Rollen-Wipes in Echtzeit.","bg":"rgba(237,66,69,.15)"},
@@ -401,7 +401,7 @@ LOG_MODS = ["Moderation","Anti-Spam","Anti-Nuke","Anti-Raid","Anti-Mention","Aut
     "Anti-Scam","Anti-Shortener","Members","Nicknames","Channels","Roles","Permissions",
     "Webhooks","Appeal","Verify","Tickets","Warns","Errors","Cases","Audit","Backup","Welcome","Leave","Default"]
 
-# activity-stream (in-memory ring-buffer)
+# (...)
 import threading
 from collections import deque
 from typing import Dict, Any, List, Optional
